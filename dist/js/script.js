@@ -90,6 +90,7 @@
       thisProduct.formInputs = thisProduct.form.querySelectorAll(select.all.formInputs); 
       thisProduct.cartButton = thisProduct.element.querySelector(select.menuProduct.cartButton);
       thisProduct.priceElem = thisProduct.element.querySelector(select.menuProduct.priceElem);
+      thisProduct.imageWrapper = thisProduct.element.querySelector(select.menuProduct.imageWrapper);
     }
 
     initAccordion(){
@@ -177,9 +178,29 @@
               price -= option.price;
             }
           }
+          
+          // find an image with the class paramId-optionId in imageWrapper
+          const optionImage = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId+'');
+          console.log(optionImage);
+
+          //check if there is any optionImage
+          if (optionImage) {
+
+            // check if there is param with a name of paramId in formData and if it includes optionId
+            if(formData[paramId] && formData[paramId].includes(optionId)) {
+
+              // show an image if the option is checked
+              optionImage.classList.add(classNames.menuProduct.imageVisible);
+            }
+            else {
+              // hide an image if option unchecked
+              optionImage.classList.remove(classNames.menuProduct.imageVisible);
+            }
+          } 
+        
+          // update calculated price in the HTML
+          thisProduct.priceElem.innerHTML = price;
         }
-        // update calculated price in the HTML
-        thisProduct.priceElem.innerHTML = price;
       }
     }
   }
