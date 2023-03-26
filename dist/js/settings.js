@@ -2,10 +2,13 @@ export const select = {
   templateOf: {
     menuProduct: '#template-menu-product',
     cartProduct: '#template-cart-product', // CODE ADDED
+    bookingWidget: '#template-booking-widget', // CA2
   },
   containerOf: {
     menu: '#product-list',
     cart: '#cart',
+    pages: '#pages', // CA 2S
+    booking: '.booking-wrapper', // CA 2E
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -26,9 +29,22 @@ export const select = {
       linkDecrease: 'a[href="#less"]',
       linkIncrease: 'a[href="#more"]',
     },
+    datePicker: {    // CA 2S
+      wrapper: '.date-picker',
+      input: `input[name="date"]`,
+    },
+    hourPicker: {
+      wrapper: '.hour-picker',
+      input: 'input[type="range"]',
+      output: '.output',
+    },
   },
-  // CODE ADDED START
-  cart: {
+  booking: {
+    peopleAmount: '.people-amount',
+    hoursAmount: '.hours-amount',
+    tables: '.floor-plan .table',
+  }, // CA 2E  
+  cart: { // CODE ADDED START
     productList: '.cart__order-summary',
     toggleTrigger: '.cart__summary',
     totalNumber: `.cart__total-number`,
@@ -45,8 +61,10 @@ export const select = {
     price: '.cart__product-price',
     edit: '[href="#edit"]',
     remove: '[href="#remove"]',
-  },
-  // CODE ADDED END
+  },  // CODE ADDED END
+  nav: {  // CA 2S
+    links: '.main-nav a',
+  },  // CA 2E
 };
 
 export const classNames = {
@@ -57,8 +75,17 @@ export const classNames = {
   // CODE ADDED START
   cart: {
     wrapperActive: 'active',
+  },  // CODE ADDED END
+  booking: {  // CA 2S
+    loading: 'loading',
+    tableBooked: 'booked',
   },
-  // CODE ADDED END
+  nav: {  
+    active: 'active',
+  },
+  pages: {
+    active: 'active',
+  } // CA 2E
 };
 
 export const settings = {
@@ -66,19 +93,31 @@ export const settings = {
     defaultValue: 1,
     defaultMin: 0,
     defaultMax: 10,
-  },
-  // CODE ADDED START
-  cart: {
+  },  
+  cart: { // CODE ADDED START
     defaultDeliveryFee: 20,
+  },  // CODE ADDED END
+  hours: { //CA 2S
+    open: 12,
+    close: 24,
   },
-  // CODE ADDED END
-  // CODE ADDED START API
-  db: {
+  datePicker: {
+    maxDaysInFuture: 14,
+  },
+  booking: {
+    tableIdAttribute: 'data-table',
+  },  //CA 2E  
+  db: { // CODE ADDED START API, CCH,A 2S
     url: '//localhost:3131',
     products: 'products',
     orders: 'orders',
-  },
-  //CODE ADDED END API
+    bookings: 'bookings',
+    events: 'events',
+    dateStartParamKey: 'date_gte',
+    dateEndParamKey: 'date_lte',
+    notRepeatParam: 'repeat=false',
+    repeatParam: 'repeat_ne=false',  
+  },  //CODE ADDED END API, CCH,A 2E
 
 };
 
@@ -87,4 +126,7 @@ export const templates = {
   // CODE ADDED START
   cartProduct: Handlebars.compile(document.querySelector(select.templateOf.cartProduct).innerHTML),
   // CODE ADDED END
+  // CA 2S
+  bookingWidget: Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
+  // CA 2E
 };
