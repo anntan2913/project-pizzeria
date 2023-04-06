@@ -43,6 +43,11 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    floorPlan: '.floor-plan',
+    formButton: '.order-confirmation [type="submit"]',
+    starters: '.free-starters',
+    phone: '.order-confirmation [name="phone"]',
+    address: '.order-confirmation [name="address"]',      
   }, // CA 2E  
   cart: { // CODE ADDED START
     productList: '.cart__order-summary',
