@@ -44,8 +44,8 @@ export const select = {
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
     floorPlan: '.floor-plan',
-    formButton: '.order-confirmation [type="submit"]',
-    starters: '.free-starters',
+    form: '.booking-form',
+    starters: '.booking-form [name="starter"]',
     phone: '.order-confirmation [name="phone"]',
     address: '.order-confirmation [name="address"]',      
   }, // CA 2E  
