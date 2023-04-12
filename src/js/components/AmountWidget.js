@@ -7,7 +7,8 @@ class AmountWidget extends BaseWidget{
 
     const thisWidget = this;
     thisWidget.getElements(element);
-    //thisWidget.setValue(settings.amountWidget.defaultValue); w konstr. kl nadrz.
+    //thisWidget.setValue(settings.amountWidget.defaultValue); w konstr. kl nadrz. ALE: wlasicwosc value rzeczywiscie sie tam ustawi, ale nie wlaczy sie refresh tej wartosci w widoku
+    thisWidget.setValue(thisWidget.dom.input.value || settings.amountWidget.defaultValue); //wlaczy sie refresh wartosci w widoku, setValue zapewni Ci tutaj jedno i drugie 
     thisWidget.initActions();
 
     console.log('AmountWidget:', thisWidget);
