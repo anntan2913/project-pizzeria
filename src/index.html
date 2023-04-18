@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-,
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +16,6 @@
 </head>
 
 <body>
-
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
@@ -30,7 +28,7 @@
           <a href="#home">Home</a>
           <a href="#order">Order</a>
           <a href="#booking">Booking</a>
-      </div>
+        </div>
 
         <div id="cart" class="cart">
           <div class="cart__summary">
@@ -83,47 +81,189 @@
 
   <script id="template-home-page" type="text/x-handlebars-template">
     <section class="home-wrapper">
-      <div class="home-container py-5">
+      <section class="home-container">
         <div class="row">
-            <div class="col-md-6">
-                <div class="card mb-3 justify-content-center d-flex align-items-center">
-                    <img src="/images/assets/pizza-1.jpg">                               
-                    <div class="card-body position-absolute">                        
-                        <a href="#" class="btn btn-light"><h2>ORDER ONLINE</h2></a>
-                        <p>Delicious food delievered to your door!</p>
-                    </div>
+            <div class="box-one col-md-6">
+               <div class="mb-3  d-flex justify-content-center d-flex align-items-center">
+                    <div class="box-one-image"><!--<img src="/images/assets/pizza-1.jpg">--></div>                             
+                    <div class="card-body position-absolute box-one-content">                        
+                        <a href="#order" class="btn btn-light position-absolute"><h2>ORDER ONLINE</h2></a>
+                        <p class="hidden-text">Delicious food delivered to your door!</p>
+                    </div> 
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="card mb-3 justify-content-center d-flex align-items-center">
-                    <img src="/images/assets/pizza-2.jpg">
-                    <div class="card-body position-absolute">                        
-                        <a href="#" class="btn btn-light"><h2>BOOK A TABLE</h2></a>
-                    </div>
+            <div class="box-two col-md-6">
+                <div class="mb-3 d-flex justify-content-center d-flex align-items-center"> 
+                    <div class="box-two-image"><!--<img src="/images/assets/pizza-2.jpg">-->   </div>                             
+                    <div class="card-body position-absolute box-two-content">                                        
+                        <a href="#booking" class="btn btn-light position-absolute"><h2>BOOK A TABLE</h2></a>
+                    </div> 
                 </div> 
             </div>
-            <div class="col-12">
-                <div class="card mb-3 d-flex justify-content-center d-flex align-items-center">
-                    <img src="/images/assets/pizza-1.jpg">
-                    <div class="card-body position-absolute">
-                        <h2>OPENING HOURS</h2>
+          </div>
+          <div class="row">
+            <div class="box-bottom col-12">
+                 <div class="mb-3 justify-content-center  align-items-center">                  
+                    <div class="card body position-absolute">
+                        <h2>OPENING HOURS:</h2>
                         <h5>TUE-SUN, 12PM-12AM</h5>
                     </div>
                 </div>  
             </div>
+          </div>
+      </section>
+
+      <section class="home-slider">
+        <div class="carousel" data-flickity='{ "autoPlay": true }'>
+          <div class="carousel-cell">
+            <div class="cell-image"><img src="images/assets/pizza-3.jpg"></div>
+            <div class="cell-content">
+              <h3>DELICIOUS FOOD!</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Fusce lacus metus, scelerisque et tortor sed, condimentum laoreet leo. 
+                Phasellus eget est.
+              </p>
+              <h5><strong> - Margaret Osborne</strong></h5>
+            </div>          
+          </div>
+          <div class="carousel-cell">
+            <div class="cell-image"><img src="images/assets/pizza-3.jpg"></div>
+            <div class="cell-content">
+              <h3>GREAT VENUE!</h3>
+              <p>Ut ac eros sodales metus fermentum semper sed vitae ex.
+                Fusce aliquam sem nunc, vitae venenatis mi accumsan sodales. 
+                Proin aliquam, urna in congue.
+              </p>
+              <h5><strong> - Martin Scott</strong></h5>
+            </div>          
+          </div>
+          <div class="carousel-cell">
+            <div class="cell-image"><img src="images/assets/pizza-3.jpg"></div>
+            <div class="cell-content">
+              <h3>AMAZING SERVICE!</h3>
+              <p>Aliquam eget porttitor magna. Donec laoreet sem nulla,
+                id egestas ligula efficitur id. Duis at viverra velit.
+                  Fusce sed lobortis mauris. Maecenas vel sapien.
+              </p>
+              <h5><strong> - Kaslik Amanow</strong></h5>
+            </div>          
+          </div>
+          <div class="carousel-cell">
+            <div class="cell-image"><img src="images/assets/pizza-3.jpg"></div>
+            <div class="cell-content">
+              <h3>GOOD SNACKS!</h3>
+              <p>Integer mi leo, venenatis a elementum convallis,
+                laoreet at ex. Quisque vel neque erat. Vivamus commodo tellus sit.
+              </p>
+              <h5><strong> - Rupert Sosnicky</strong></h5>
+            </div>          
+          </div>         
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="carousel" data-flickity='{ "autoPlay": true }'>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
+      <section class="gallery">
+        <div class="gallery-container">
+          <div class="row row-gal">
+            <div class="gallery-con image-one">
+              <div class="icons-added">
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#"><i class="fas fa-share-alt"></i></a>
+              </div>
+            </div>
+            <div class="gallery-con image-two">
+              <div class="icons-added">
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#"><i class="fas fa-share-alt"></i></a>
+              </div>
+            </div>
+            <div class="gallery-con image-three">
+              <div class="icons-added">
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#"><i class="fas fa-share-alt"></i></a>
+              </div>
+            </div>            
+          </div>
+          <div class="row row-gal">
+            <div class="gallery-con image-four">
+              <div class="icons-added">
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#"><i class="fas fa-share-alt"></i></a>
+              </div>
+            </div>
+            <div class="gallery-con image-five">
+              <div class="icons-added">
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#"><i class="fas fa-share-alt"></i></a>
+              </div>
+            </div>
+            <div class="gallery-con image-six">
+              <div class="icons-added">
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#"><i class="fas fa-share-alt"></i></a>
+              </div>
+            </div>            
+          </div>
+        </div>
+      </section>
 
-    
+
+
+      <!--
+      <section class="home-gallery">
+        <div class="gallery-wrapper container-fluid">
+          <div class="row-gal row-align-items">
+            <div class="col-sm-4">
+              <div class="card mb-3 justify-content-center d-flex align-items-center">
+                <img src="/images/assets/pizza-4.jpg" class="responsive">
+                <div class="card-body position-absolute justify-content-center d-flex align-items-center">
+                  <i class="fas fa-heart"></i>
+                  <i class="fas fa-share-alt"></i>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card-image"><img src="/images/assets/pizza-5.jpg" class="responsive">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card-image"><img src="/images/assets/pizza-6.jpg" class="responsive">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row-gal row-align-items">
+            <div class="col-sm-4">
+              <div class="card-image"><img src="/images/assets/pizza-7.jpg" class="responsive">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card-image"><img src="/images/assets/pizza-8.jpg" class="responsive">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card-image"><img src="/images/assets/pizza-9.jpg" class="responsive">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-share-alt"></i>
+              </div>
+            </div>
+          </div>    
+        </div>
+      </section> -->
+
+      <section class="footer">
+        <div class="footer"><a href="#" class="social-media">View more on Instagram</a></div>
+        </div>
+      </section>
+
+    </section>  
+
   </script>
 
   <script id="template-cart-product" type="text/x-handlebars-template">

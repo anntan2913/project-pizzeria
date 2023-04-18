@@ -6,7 +6,8 @@ class Home{
     const thisHome = this;
       
     thisHome.render(element);
-    //thisHome.initWidgets();      
+    thisHome.initWidgets(element);
+    thisHome.linksToPages;      
   }
 
   render(){
@@ -24,12 +25,38 @@ class Home{
     const homeCon = document.querySelector(select.containerOf.home);
 
     /* add element to container */
-    homeCon.appendChild(thisHome.element);
-
-    console.log('generatedHTML', generatedHTML);
+    homeCon.appendChild(thisHome.element);    
   }
+  /*
+  initWidgets(){
+    const thisHome = this;
 
-  //initWidgets(){ }
+    const elem = document.querySelector('carousel');
+    const flkty = new Flickity(elem, {
+      // options
+      cellAlign: 'center',      
+      wrapAround: true,
+      autoPlay: true,
+      freeScroll: true,
+      contain: true,      
+      imagesLoaded: true,
+    });
+  } 
+
+  linksToPages(){
+    const thisHome = this;
+
+    thisHome.links = document.querySelectorAll(select.homePage.links);
+
+    for(let button of thisHome.links) {
+      button.addEventListener('click', function(){
+        const clickedElement = this;
+        const buttonType = clickedElement.getAttribute('href').replace('#', '');
+
+        app.activatePage(buttonType);
+      });
+    }
+  } */
 
 }
 

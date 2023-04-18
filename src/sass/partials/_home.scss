@@ -1,58 +1,260 @@
-
-
+/* Home */
+.home-page {
+  padding: ($base-size * 3) 0;
+}    
+  
 .home-wrapper {
-    width: 700px;
-    height: 1260px;
-    border-radius: 4px;
-    background-color: #ffffff;  
-    margin-top: 40px;
-    
-    
-    
+  margin: ($base-size / 2) auto;
+  padding: ($base-size * 6) ($base-size * 4);
+  background: $color-light;
+  border-bottom: 1px solid lighten($color-dark, 70%);
+  border-radius: $radius;    
 }
 
+/* First section */
 
+.home-container {
+  max-width: 610px;
+  max-height: 260px;
+  margin: auto;
+  margin-bottom: 110px;  
+}
+
+.row {
+  max-width: 100%;
+  max-height: 120px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;  
+  border-radius: 10px;
+  
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 400;
+
+  font-family: "Oswald";   
+  line-height: 14px;
+  
+  .box-one, .box-two {    
+    background-color: #393232;
+    text-align: center;
+    padding: 15px;
+    margin: 2px;    
+    letter-spacing: -1px;
+  } 
+  
+  .btn-light {
+    
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    
+    display: inline-block;
+    font-size: 22px;
+    margin: 4px 2px 0 0;
+    cursor: pointer;
+  }
+  
+  
+  .box-one:hover, .box-two:hover {
+    animation-name: fadeIn;
+    animation-duration: 4s;
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  } 
+
+  .box-bottom {
+    background-color: $color-main;
+    margin: auto;
+    margin-top: 5px;
+
+    h5 {
+      font-size: 14px;
+      color: #fff;
+      font-weight: 300;
+      font-family: "Oswald";        
+    }
+  }
+}  
+
+/*
 .card img {
-    width: 130%;
-    max-height: 125px;
-    object-fit: cover;
-    vertical-align: middle;
-    border-color: aqua;
-    
-}
+  width: 130%;
+  max-height: 125px;
+  object-fit: cover;
+  vertical-align: text-top;
+ } 
+
 .actions .card-body h5 {
-    padding: 3px;
+  padding: 3px;
     
-}
+}  */
 
 /* Carousel */
-
-/* external css: flickity.css */
 
 * { box-sizing: border-box; }
 
 body { font-family: sans-serif; }
 
 .carousel {
-  background: #EEE;
+  
+  width: 610px;
+  height: 220px;
+  margin: 15px, auto;
+  margin-bottom: 100px;
 }
 
 .carousel-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: gallery-cell;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;  
+  position: relative;
+
+  .cell-image {
+    position: absolute;
+    width: 33%;
+    height: auto;
+    overflow: hidden;
+    
+  }
+
+  .img {
+    width: 195px;
+    height: 195px;
+    object-fit: contain;    
+  }
+
+  .cell-content {
+    padding: 10px 5px 15px 40%;
+    text-align: left;
+    font-size: 14px;
+    font-family: "Lato";
+
+    h3 {
+      font-size: 16px;
+      color: #333333;
+      font-weight: 700;      
+    }
+
+    p {      
+      line-height: 23px;
+      color: #333333;
+      font-weight: 600;      
+    }
+
+    h5 {      
+      line-height: 20px;      
+      font-weight: 400;
+      font-style: italic;      
+    }
+  }
+
 }
 
-/* cell number */
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
+/* Gallery */
+
+.gallery-container {
+  width: 610px;
+  height: 420px;
+  display: flexbox;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.gallery-con {
+  width: 195px;
+  height: 195px;
+  margin: 5px;
+  position: relative;  
+  transition: transform 3s;
+  float:left; 
+  background-position: center;
+  background-size: cover;  
+  z-index: 0; 
+}
+
+.icons-added {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons-added i {
+  margin: auto;  
+  visibility: hidden;
+} 
+
+.gallery-con:hover::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: $color-dark;
+  opacity: 0.4;
+  transition: 2s linear;
+ 
+}
+
+.gallery-con a {
+  z-index: 3;
+}
+
+.image-one{
+  background-image: url(../images/assets/pizza-4.jpg);
+}
+
+.image-two{
+  background-image: url(../images/assets/pizza-5.jpg);
+}
+
+.image-three{
+  background-image: url(../images/assets/pizza-6.jpg);
+}
+
+.image-four{
+  background-image: url(../images/assets/pizza-7.jpg);
+}
+
+.image-five{
+  background-image: url(../images/assets/pizza-8.jpg);
+}
+
+.image-six{
+  background-image: url(../images/assets/pizza-9.jpg);
+}
+
+.gallery-con i {
+  visibility: hidden;
+  margin: 5px;
+  transform: scale(0.5);  
+  cursor: pointer;
+}
+
+.gallery-con:hover i {
+  visibility: visible;
+  color: $color-main;
+  transform: scale(1);
+  transition: 2s;
+
+}
+
+/* Section footer */
+
+.footer {
+  margin-top: 30px;
+
+  .social-media {
+    color: $color-main;   
+  }
 }
 
