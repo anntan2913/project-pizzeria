@@ -121,7 +121,7 @@ export const settings = {
     tableIdAttribute: 'data-table',
   },  //CA 2E  
   db: { // CODE ADDED START API, CCH,A 2S
-    url: '//localhost:3131',
+    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
     products: 'products',
     orders: 'orders',
     bookings: 'bookings',
