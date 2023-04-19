@@ -82,29 +82,27 @@
   <script id="template-home-page" type="text/x-handlebars-template">
     <section class="home-wrapper">
       <section class="home-container">
-        <div class="row">
-            <div class="box-one col-md-6">
-               <div class="mb-3  d-flex justify-content-center d-flex align-items-center">
-                    <div class="box-one-image"><!--<img src="/images/assets/pizza-1.jpg">--></div>                             
-                    <div class="card-body position-absolute box-one-content">                        
+        <div class="row row-intro">
+            <div class="box-one col-md-6 box-one-image">
+               <div class="mb-3  d-flex justify-content-center d-flex align-items-center">                                          
+                    <div class="card position-absolute box-one-content">                        
                         <a href="#order" class="btn btn-light position-absolute"><h2>ORDER ONLINE</h2></a>
-                        <p class="hidden-text">Delicious food delivered to your door!</p>
+                        <p class="text-add">Delicious food delivered to your door!</p>
                     </div> 
                 </div>
             </div>
-            <div class="box-two col-md-6">
-                <div class="mb-3 d-flex justify-content-center d-flex align-items-center"> 
-                    <div class="box-two-image"><!--<img src="/images/assets/pizza-2.jpg">-->   </div>                             
-                    <div class="card-body position-absolute box-two-content">                                        
+            <div class="box-two col-md-6 box-two-image">
+                <div class="mb-3 d-flex justify-content-center d-flex align-items-center">                                                
+                    <div class="card position-absolute box-two-content">                                        
                         <a href="#booking" class="btn btn-light position-absolute"><h2>BOOK A TABLE</h2></a>
                     </div> 
                 </div> 
             </div>
           </div>
-          <div class="row">
+          <div class="row row-intro">
             <div class="box-bottom col-12">
                  <div class="mb-3 justify-content-center  align-items-center">                  
-                    <div class="card body position-absolute">
+                    <div class="card position-absolute">
                         <h2>OPENING HOURS:</h2>
                         <h5>TUE-SUN, 12PM-12AM</h5>
                     </div>
@@ -114,7 +112,7 @@
       </section>
 
       <section class="home-slider">
-        <div class="carousel" data-flickity='{ "autoPlay": true }'>
+        <div class="main-carousel" data-flickity='{ "autoPlay": true }'>
           <div class="carousel-cell">
             <div class="cell-image"><img src="images/assets/pizza-3.jpg"></div>
             <div class="cell-content">
@@ -163,7 +161,7 @@
 
       <section class="gallery">
         <div class="gallery-container">
-          <div class="row row-gal">
+          <div class="row-gal">
             <div class="gallery-con image-one">
               <div class="icons-added">
                 <a href="#"><i class="fas fa-heart"></i></a>
@@ -183,7 +181,7 @@
               </div>
             </div>            
           </div>
-          <div class="row row-gal">
+          <div class="row-gal">
             <div class="gallery-con image-four">
               <div class="icons-added">
                 <a href="#"><i class="fas fa-heart"></i></a>

@@ -4,7 +4,6 @@ export const select = {
     cartProduct: '#template-cart-product', // CODE ADDED
     bookingWidget: '#template-booking-widget', // CA2
     homePage: '#template-home-page',
-
   },
   containerOf: {
     menu: '#product-list',
@@ -52,11 +51,11 @@ export const select = {
     phone: '.order-confirmation [name="phone"]',
     address: '.order-confirmation [name="address"]',      
   }, // CA 2E  
-  homePage: {
+  /*homePage: {
     links: '.card-body a',
     linkOrderButton: '[href="#order"]',
     linkBookingButton: '[href="#booking"]',
-  },
+  },*/
 
   cart: { // CODE ADDED START
     productList: '.cart__order-summary',
@@ -77,7 +76,7 @@ export const select = {
     remove: '[href="#remove"]',
   },  // CODE ADDED END
   nav: {  // CA 2S
-    links: '.main-nav a',
+    links: '.main-nav a, .home-wrapper .btn',
   },  // CA 2E
 };
 

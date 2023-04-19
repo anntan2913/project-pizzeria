@@ -20,92 +20,94 @@
   margin-bottom: 110px;  
 }
 
-.row {
+.row-intro {
   max-width: 100%;
   max-height: 120px;
   margin: auto;
   display: flex;
-  flex-wrap: nowrap;  
-  border-radius: 10px;
-  
+  flex-wrap: nowrap;
+  border-radius: 10px;    
   text-align: center;
   font-size: 22px;
   color: #fff;
   font-weight: 400;
-
   font-family: "Oswald";   
-  line-height: 14px;
-  
-  .box-one, .box-two {    
-    background-color: #393232;
-    text-align: center;
-    padding: 15px;
-    margin: 2px;    
-    letter-spacing: -1px;
-  } 
-  
-  .btn-light {
-    
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    
-    display: inline-block;
-    font-size: 22px;
-    margin: 4px 2px 0 0;
-    cursor: pointer;
-  }
-  
-  
-  .box-one:hover, .box-two:hover {
-    animation-name: fadeIn;
-    animation-duration: 4s;
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+  line-height: 0.2;
+}
+
+.box-one-image{
+  background-image: url(../images/assets/pizza-1.jpg);
+}
+
+.box-two-image{
+  background-image: url(../images/assets/pizza-2.jpg);
+}
+
+.box-one, .box-two {   
+  text-align: center;
+  padding: 5px;
+  margin-inline: 2px; 
+  position: relative;  
+  transition: transform 3s;
+  float: left; 
+  background-position: center;
+  background-size: cover;
+} 
+
+.btn-light {  
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;  
+  display: inline-block;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.text-add {
+  font-size: 14px;
+  font-family: "Lato";
+  line-height: 0;
+  margin: 0; 
+}
+
+.box-one:hover, .box-two:hover {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
     }
-  } 
-
-  .box-bottom {
-    background-color: $color-main;
-    margin: auto;
-    margin-top: 5px;
-
-    h5 {
-      font-size: 14px;
-      color: #fff;
-      font-weight: 300;
-      font-family: "Oswald";        
+    to {
+      opacity: 1;
     }
   }
-}  
+} 
 
-/*
-.card img {
-  width: 130%;
-  max-height: 125px;
-  object-fit: cover;
-  vertical-align: text-top;
- } 
+.box-bottom {
+  height: 120px;
+  background-color: $color-main;
+  margin: auto;  
+  margin-top: 5px;
 
-.actions .card-body h5 {
-  padding: 3px;
-    
-}  */
+  h5 {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    font-family: "Lato";
+    padding: 40px, 0;
+    line-height:1.3;        
+  }
+}
+
+h2 {
+  margin-top: 40px;
+}
 
 /* Carousel */
 
-* { box-sizing: border-box; }
-
-body { font-family: sans-serif; }
-
-.carousel {
+.main-carousel {
   
   width: 610px;
   height: 220px;
@@ -122,32 +124,32 @@ body { font-family: sans-serif; }
   .cell-image {
     position: absolute;
     width: 33%;
-    height: auto;
-    overflow: hidden;
+    height: 100%;
+    overflow: hidden; 
     
-  }
-
-  .img {
-    width: 195px;
-    height: 195px;
-    object-fit: contain;    
-  }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;    
+    }
+  }  
 
   .cell-content {
     padding: 10px 5px 15px 40%;
     text-align: left;
     font-size: 14px;
     font-family: "Lato";
+    color: $color-dark;
 
     h3 {
       font-size: 16px;
-      color: #333333;
+      //color: #333333;
       font-weight: 700;      
     }
 
     p {      
       line-height: 23px;
-      color: #333333;
+      //color: #333333;
       font-weight: 600;      
     }
 
@@ -157,7 +159,6 @@ body { font-family: sans-serif; }
       font-style: italic;      
     }
   }
-
 }
 
 /* Gallery */
@@ -170,13 +171,22 @@ body { font-family: sans-serif; }
   flex-wrap: nowrap;
 }
 
+.row-gal {
+  max-width: 100%;
+  max-height: 210px;
+  margin: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  border-radius: 10px  
+}
+
 .gallery-con {
   width: 195px;
   height: 195px;
   margin: 5px;
   position: relative;  
   transition: transform 3s;
-  float:left; 
+  float: left; 
   background-position: center;
   background-size: cover;  
   z-index: 0; 
@@ -196,13 +206,16 @@ body { font-family: sans-serif; }
 } 
 
 .gallery-con:hover::after {
+  content: "";
+  display: block;
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: $color-dark;
   opacity: 0.4;
   transition: 2s linear;
- 
+  top: 0;
+  left: 0; 
 }
 
 .gallery-con a {
@@ -245,13 +258,12 @@ body { font-family: sans-serif; }
   color: $color-main;
   transform: scale(1);
   transition: 2s;
-
 }
 
 /* Section footer */
 
 .footer {
-  margin-top: 30px;
+  margin-top: 5px;
 
   .social-media {
     color: $color-main;   

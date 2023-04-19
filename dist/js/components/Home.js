@@ -6,8 +6,8 @@ class Home{
     const thisHome = this;
       
     thisHome.render(element);
-    thisHome.initWidgets(element);
-    thisHome.linksToPages;      
+    //thisHome.initWidgets(element);
+    //thisHome.linksToPages;      
   }
 
   render(){

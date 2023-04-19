@@ -11,7 +11,6 @@ const app = {
 
     const homeCon = document.querySelector(select.containerOf.home);
     thisApp.home = new Home(homeCon);
-
   },
 
   initBooking: function(){
