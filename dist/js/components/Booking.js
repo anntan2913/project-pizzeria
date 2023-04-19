@@ -14,7 +14,7 @@ class Booking{
     thisBooking.initWidgets();
     thisBooking.getData();
     
-    console.log('selectedTable',this.selectedTable);
+    //console.log('selectedTable',this.selectedTable);
   }
 
   getData(){
@@ -38,7 +38,7 @@ class Booking{
         endDateParam,
       ],
     };
-    console.log('getData params', params);
+    //console.log('getData params', params);
 
     const urls = {
       bookings:       settings.db.url + '/' + settings.db.bookings
@@ -48,7 +48,7 @@ class Booking{
       eventsRepeat:   settings.db.url + '/' + settings.db.events   
                                       + '?' + params.eventsRepeat.join('&'),
     };
-    console.log('getData urls', urls);
+    //console.log('getData urls', urls);
 
     Promise.all([
       fetch(urls.bookings),
@@ -238,8 +238,8 @@ class Booking{
           }
         }
       }
-      console.log('eventtarget', event.target);
-      console.log('thisBooking.selectedTable', thisBooking.selectedTable);
+      //console.log('eventtarget', event.target);
+      //console.log('thisBooking.selectedTable', thisBooking.selectedTable);
     });  
   }
   

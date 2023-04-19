@@ -6,8 +6,7 @@ class Home{
     const thisHome = this;
       
     thisHome.render(element);
-    //thisHome.initWidgets(element);
-    //thisHome.linksToPages;      
+    //thisHome.initWidgets(element);     
   }
 
   render(){
@@ -43,20 +42,7 @@ class Home{
     });
   } 
 
-  linksToPages(){
-    const thisHome = this;
-
-    thisHome.links = document.querySelectorAll(select.homePage.links);
-
-    for(let button of thisHome.links) {
-      button.addEventListener('click', function(){
-        const clickedElement = this;
-        const buttonType = clickedElement.getAttribute('href').replace('#', '');
-
-        app.activatePage(buttonType);
-      });
-    }
-  } */
+  */
 
 }
 

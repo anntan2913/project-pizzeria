@@ -51,12 +51,7 @@ export const select = {
     phone: '.order-confirmation [name="phone"]',
     address: '.order-confirmation [name="address"]',      
   }, // CA 2E  
-  /*homePage: {
-    links: '.card-body a',
-    linkOrderButton: '[href="#order"]',
-    linkBookingButton: '[href="#booking"]',
-  },*/
-
+  
   cart: { // CODE ADDED START
     productList: '.cart__order-summary',
     toggleTrigger: '.cart__summary',
